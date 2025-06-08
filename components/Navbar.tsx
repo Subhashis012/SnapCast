@@ -12,6 +12,15 @@ const Navbar = () => {
     const {data: session} = authClient.useSession();
     const user = session?.user;
 
+    const handleLogout = async () => {
+    try {
+      await authClient.signOut();
+      router.push("/");
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
+  }
+
 
   return (
     <header className="navbar">
@@ -37,7 +46,7 @@ const Navbar = () => {
                 className="rounded-full aspect-square"
               />
             </button>
-            <button className="cursor-pointer">
+            <button className="cursor-pointer" onClick={handleLogout}>
                 <Image
                 src="/assets/icons/logout.svg"
                 alt="logout"
