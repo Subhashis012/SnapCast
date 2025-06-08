@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Subhashis-Dhara-s-workspace-8j84ku.eu-central-1.xata.sh/db/SnapCast",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}
